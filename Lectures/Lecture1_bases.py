@@ -79,11 +79,11 @@ iter **= 5  # iter = iter ** 5  ЭТО ВОЗВЕДЕНИЕ В СТЕПЕНЬ
 #  # operator n + 2
 #  # ...
 #  # operator n + m
-username = input('Введите имя: ')
-if (username == 'Маша'):
-    print('Ура, это же МАША!')
-else:
-    print('Привет, ', username)
+# username = input('Введите имя: ')
+# if (username == 'Маша'):
+#     print('Ура, это же МАША!')
+# else:
+#     print('Привет, ', username)
 # if condition1:
 #  # operator
 # elif condition2:
@@ -92,3 +92,56 @@ else:
 #  # operator
 # else:
 #  # operator
+
+
+########################################### Управляющие конструкции: while ############
+# while condition:
+# operator 1
+# operator 2       ОТСТУПЫ ВАЖНЫ
+# . . .
+# operator n
+
+# while condition:
+#  # operator 1
+#  # operator 2
+#  # . . .
+#  # operator n
+# else:
+#  # operator n + 1
+#  # operator n + 2
+#  # . . .
+#  # operator n + m
+
+# original = 23456
+# inverted = 0
+# while original != 0:
+#     inverted = inverted * 10 + (original % 10)  # ПЕРЕВОРАЧИВАЕТ ЧИСЛО
+#     original //= 10
+#     print(original)
+# else:
+#     print('Пожалуй')
+#     print('хватит )')
+# print(inverted)
+
+
+############################################## Управляющие конструкции: for #################
+# for i in enumeration:
+#  # operator 1
+#  # operator 2
+#  # . . .
+#  # operator n
+
+# for i in 1, -2, 3, 14, 5:
+# print(i)
+
+
+############################################ Знакомьтесь – range ##################################
+# r = range(5)  # range(0, 5) СПИСОК ОТ 1 .. 5
+# for i in r:
+#     print(i)
+# r = range(2, 5)  # range(2, 5)
+# for i in r:
+#     print(i)
+# r = range(-5, 0)  # range(-5, 0)
+# r = range(1, 10, 2)  # range(1, 10, 2) СПИСОК ОТ 1 .. 9 ЧЕРЕЗ 2 [1 3 5 7 9]
+# r = range(100, 0, -20)  # range(100, 0, -20)
