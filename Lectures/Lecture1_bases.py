@@ -60,10 +60,35 @@ iter **= 5  # iter = iter ** 5  ЭТО ВОЗВЕДЕНИЕ В СТЕПЕНЬ
 ################################################## >, >=, <, <=, ==, !=                 ###########
 ################################################## not, and, or – не путать с &, |, ^   ###########
 ################################################## Кое-что ещё: is, is not, in, not in  ###########
-f = [1, 2, 4, 5]
-print(f)
-print(2 in f)  # True
-print(not 2 in f)  # false
+# f = [1, 2, 4, 5]
+# print(f)
+# print(2 in f)  # True
+# print(not 2 in f)  # false
 
-even = not f[2] % 2  # ПРОВЕРКА ЧЕТНОСТИ
-print(even)
+# even = not f[2] % 2  # ПРОВЕРКА ЧЕТНОСТИ
+# print(even)
+
+#########################################  Управляющие конструкции: if , if-else ##########
+# if condition:
+#  # operator 1
+#  # operator 2
+#  # ...
+#  # operator n
+# else:
+#  # operator n + 1
+#  # operator n + 2
+#  # ...
+#  # operator n + m
+username = input('Введите имя: ')
+if (username == 'Маша'):
+    print('Ура, это же МАША!')
+else:
+    print('Привет, ', username)
+# if condition1:
+#  # operator
+# elif condition2:
+#  # operator
+# elif condition3:
+#  # operator
+# else:
+#  # operator
