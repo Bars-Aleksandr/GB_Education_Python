@@ -5,8 +5,8 @@
 # - 7 -> да
 # - 1 -> нет
 print('Введите день недели цифрой')
-week_day = int(input())
-if week_day in [6, 7]:
-    print(week_day, '->', 'да')
+weekend = int(input())
+if weekend in [6, 7]:
+    print(weekend, '->', 'да')
 else:
-    print(week_day, '->', 'нет')
+    print(weekend, '->', 'нет')
