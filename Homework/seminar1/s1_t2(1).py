@@ -1,7 +1,9 @@
 # Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
-print('Введите значения аргументов X Y Z')
-xyz = [bool(i) for i in input().split()]
-if (not (xyz[0] or xyz[1] or xyz[2]) == (not xyz[0] and not xyz[1] and not xyz[2])):
-    print('утверждение для введенных аргументов верно')
-else:
-    print('утверждение для введенных аргументов неверно')
+
+for x in 0, 1:
+    for y in 0, 1:
+        for z in 0, 1:
+            if (not (x or y or z) == (not x and not y and not z)):
+                print('для аргументов', x, y, z, ' утверждение верно')
+            else:
+                print('для аргументов', x, y, z, ' утверждение  неверно')
