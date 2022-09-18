@@ -164,3 +164,37 @@
 # red, green, blue = t
 # print('r:{} g:{} b:{}'.format(red, green, blue))
 # # r:red g:green b:blue
+
+
+########################### Словари Неупорядоченные коллекции произвольных объектов с доступом по ключу #####
+
+# dictionary = {}  создали пустой словарь
+# dictionary = \   создали словарь с доступом по ключу \ - чтобы значения писались с новой строки
+#     {
+#         'up': '↑',     'up' - ключ что справо это значение
+#         'left': '←',
+#         'down': '↓',
+#         'right': '→'
+#     }
+# print(dictionary)  # {'up':'↑', 'left':'←', 'down':'↓', 'right':'→'}
+# print(dictionary['left'])  # ←
+
+# for k in dictionary.keys:
+#     print(k)                  можно посмотреть все ключи
+
+# for k in dictionary.values:
+#     print(k)                  можно посмотреть все значения
+
+# # типы ключей могут отличаться
+
+# print(dictionary['up'])  # ↑
+# # типы ключей могут отличаться
+# dictionary['left'] = '⇐'
+# print(dictionary['left'])  # ⇐
+# #print(dictionary['type']) # KeyError: 'type'
+# del dictionary['left']  # удаление элемента
+# for item in dictionary:  # for (k,v) in dictionary.items(): ПОЛУЧЕНИЕ СЛОВАРЯ ПАРАМИ
+#  print('{}: {}'.format(item, dictionary[item]))
+# # up: ↑
+# # down: ↓
+# # right: →
