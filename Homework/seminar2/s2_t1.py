@@ -18,8 +18,23 @@
 # Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
 # Пример:
 # - пусть N = 4, тогда[1, 2, 6, 24](1, 1*2, 1*2*3, 1*2*3*4)
-number_N = int(input('введите число N:'))
-a = 1
-for i in range(number_N):
-    a = a * (i+1)
-    print(a, end=' ')
+
+# number_N = int(input('введите число N:'))
+# a = 1
+# for i in range(number_N):
+#     a = a * (i+1)
+#     print(a, end=' ')
+
+####################################################################################################################
+
+# Задайте список из n чисел последовательности $(1 +\frac 1 n) ^ n$ и выведите на экран их сумму.
+
+numbers = int(input('Введите число n: '))
+list_numbers = []
+sum_elements = 0
+for n in range(1, numbers+1):
+    a = round((1 + 1 / n) ** n, 2)
+    sum_elements = sum_elements + a
+    list_numbers.insert(n, a)
+print(list_numbers)
+print('Сумма элементов полученной последовательности', sum_elements)
