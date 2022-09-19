@@ -5,11 +5,21 @@
 # - 0, 56 -> 11
 
 
-print('Введите число')
-a = input()
-sum = 0
-lenght = len(a)
-for i in range(lenght):
-    if a[i] != ',' and a[i] != '.' and a[i] != ' ':
-        sum = sum + int(a[i])
-print(sum)
+# print('Введите число')
+# a = input()
+# sum = 0
+# lenght = len(a)
+# for i in range(lenght):
+#     if a[i] != ',' and a[i] != '.' and a[i] != ' ':
+#         sum = sum + int(a[i])
+# print(sum)
+
+###############################################################################################################
+# Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
+# Пример:
+# - пусть N = 4, тогда[1, 2, 6, 24](1, 1*2, 1*2*3, 1*2*3*4)
+number_N = int(input('введите число N:'))
+a = 1
+for i in range(number_N):
+    a = a * (i+1)
+    print(a, end=' ')
