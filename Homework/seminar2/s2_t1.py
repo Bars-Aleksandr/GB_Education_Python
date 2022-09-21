@@ -44,32 +44,51 @@
 # Задайте список из N элементов, заполненных числами из промежутка[-N, N].
 # Найдите произведение элементов на указанных позициях. Позиции хранятся в файле file.txt в одной строке одно число.
 
-from random import randint
+# from random import randint
+
+
+# def create_rnd_list(n):
+#     rnd_list = [randint(-n, n) for i in range(n)]
+#     return rnd_list
+
+
+# def create_file_position(n):
+#     amount = randint(1, n)
+#     data = open('file.txt', 'w')
+#     for i in range(amount):
+#         a = randint(1, n)
+#         data.write(str(a)+"\n")
+
+
+# number = int(input('Введите число N: '))
+# list = create_rnd_list(number)
+# create_file_position(number)
+
+# p = 1
+# with open(r"file.txt", "r") as position_file:
+#     print('Позиции из файла file.txt')
+#     for i in position_file:
+#         print(i, end='')
+#         pp = int(i)
+#         p *= list[pp-1]
+# print('Сгенерированый список', list)
+# print('Произведения чисел ', p)
+
+##################################################################################
+
+#  Реализуйте алгоритм перемешивания списка.
+
+import random
 
 
 def create_rnd_list(n):
-    rnd_list = [randint(-n, n) for i in range(n)]
+    rnd_list = [random.randint(-n, n) for i in range(n)]
     return rnd_list
 
 
-def create_file_position(n):
-    amount = randint(1, n)
-    data = open('file.txt', 'w')
-    for i in range(amount):
-        a = randint(1, n)
-        data.write(str(a)+"\n")
-
-
-number = int(input('Введите число N: '))
+number = random.randint(5, 10)
 list = create_rnd_list(number)
-create_file_position(number)
-
-p = 1
-with open(r"file.txt", "r") as position_file:
-    print('Позиции из файла file.txt')
-    for i in position_file:
-        print(i, end='')
-        pp = int(i)
-        p *= list[pp-1]
-print('Сгенерированый список', list)
-print('Произведения чисел ', p)
+print('Исходный список: ', list, end='')
+random.shuffle(list)
+print()
+print('Перемешеный список: ', list, end='')
