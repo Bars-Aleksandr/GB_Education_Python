@@ -396,3 +396,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+#Скриншоты выполненый домашних заданий
+ScreenshotHW.jpg
+sreenshot.png
+
+# Файлы получаемые в процессе работы программ для выполнения домашних заданий
+file.txt
