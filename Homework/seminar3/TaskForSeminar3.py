@@ -82,14 +82,46 @@
 # - 45 -> 101101
 # - 3 -> 11
 # - 2 -> 10
-def dec_in_bin(num):
-    bin = ''
-    while num != 0:
-        bin = bin + str(num % 2)
-        num = num // 2
-    return bin
+# def dec_in_bin(num):
+#     bin = ''
+#     while num != 0:
+#         bin = bin + str(num % 2)
+#         num = num // 2
+#     return bin
 
 
-dec = int(input('Enter a Number in DEC format: '))
-bin = dec_in_bin(dec)
-print(dec, '->', bin[::-1])
+# dec = int(input('Enter a Number in DEC format: '))
+# bin = dec_in_bin(dec)
+# print(dec, '->', bin[::-1])
+
+
+#######################################################################################################
+
+# Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
+
+# Пример:
+
+# - для k = 8 список будет выглядеть так: [-21, 13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
+def fibonacci(n):
+    if n in [1, 2]:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+
+def negafibonacci(n):
+    if n == 1:
+        return 1
+    elif n == 2:
+        return -1
+    else:
+        num1, num2 = 1, -1
+        for i in range(2, n):
+            num1, num2 = num2, num1 - num2
+        return num2
+
+
+number = int(input('Enter number: '))
+list1 = [fibonacci(i) for i in range(1, number + 1)]
+list2 = [negafibonacci(i) for i in range(number, 1, -1)]
+print(list2+list1)
