@@ -29,21 +29,21 @@
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
-from random import randint
+# from random import randint
 
 
-def create_rnd_list(n):
-    rnd_list = [randint(1, n) for i in range(n)]
-    return rnd_list
+# def create_rnd_list(n):
+#     rnd_list = [randint(1, n) for i in range(n)]
+#     return rnd_list
 
 
-n = int(input('Enter the number of list items: '))
-list = create_rnd_list(n)
-print('My list: ', list)
+# n = int(input('Enter the number of list items: '))
+# list = create_rnd_list(n)
+# print('My list: ', list)
 
-lst_multiple = []
-i = 0
-while i <= (n-1)-i:
-    lst_multiple.append(list[i] * list[n-1-i])
-    i += 1
-print('Multiple list: ', lst_multiple)
+# lst_multiple = []
+# i = 0
+# while i <= (n-1)-i:
+#     lst_multiple.append(list[i] * list[n-1-i])
+#     i += 1
+# print('Multiple list: ', lst_multiple)
