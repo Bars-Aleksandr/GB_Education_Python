@@ -47,3 +47,30 @@
 #     lst_multiple.append(list[i] * list[n-1-i])
 #     i += 1
 # print('Multiple list: ', lst_multiple)
+###############################################################################################
+# Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу
+# между максимальным и минимальным значением дробной части элементов.
+
+# Пример:
+
+# - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+
+
+import random
+
+
+def create_rnd_list(n):
+    rnd_list = [round(random.uniform(1, n), 2) for i in range(n)]
+    return rnd_list
+
+
+def fraction(x): return x % 1
+
+
+#n = int(input('Enter the number of list items: '))
+n = 5
+list = create_rnd_list(n)
+print('My list: ', list)
+list2 = sorted([round(fraction(list[i]), 2) for i in range(n)])
+print(list2)
+print(list, '=>', round(list2[n-1]-list2[0], 2))
