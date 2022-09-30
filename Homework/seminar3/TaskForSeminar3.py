@@ -83,32 +83,32 @@
 # - 2 -> 10
 
 
-def dec_in_bin(num):
-    bin = ''
-    while num != 0:
-        bin = bin + str(num % 2)
-        num = num // 2
-    bin = bin[::-1]
-    return bin
+# def dec_in_bin(num):
+#     bin = ''
+#     while num != 0:
+#         bin = bin + str(num % 2)
+#         num = num // 2
+#     bin = bin[::-1]
+#     return bin
 
 
-def invert1_0(bin):
-    temp = list(bin)
-    for i in range(len(temp)):
-        if temp[i] == '0':
-            temp[i] = '1'
-        else:
-            temp[i] = '0'
-    bin = ''.join(temp)
-    return bin
+# def invert1_0(bin):
+#     temp = list(bin)
+#     for i in range(len(temp)):
+#         if temp[i] == '0':
+#             temp[i] = '1'
+#         else:
+#             temp[i] = '0'
+#     bin = ''.join(temp)
+#     return bin
 
 
-dec = int(input('Enter a Number in DEC format: '))
-if dec >= 0:
-    bin = dec_in_bin(dec)
-else:
-    bin = bin(dec)
-print(dec, '->', bin)
+# dec = int(input('Enter a Number in DEC format: '))
+# if dec >= 0:
+#     bin = dec_in_bin(dec)
+# else:
+#     bin = bin(dec)
+# print(dec, '->', bin)
 
 
 #######################################################################################################
@@ -118,26 +118,26 @@ print(dec, '->', bin)
 # Пример:
 
 # - для k = 8 список будет выглядеть так: [-21, 13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
-# def fibonacci(n):
-#     if n in [1, 2]:
-#         return 1
-#     else:
-#         return fibonacci(n-1) + fibonacci(n-2)
+def fibonacci(n):
+    if n in [1, 2]:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
 
 
-# def negafibonacci(n):
-#     if n == 1:
-#         return 1
-#     elif n == 2:
-#         return -1
-#     else:
-#         num1, num2 = 1, -1
-#         for i in range(2, n):
-#             num1, num2 = num2, num1 - num2
-#         return num2
+def negafibonacci(n):
+    if n == 1:
+        return 1
+    elif n == 2:
+        return -1
+    else:
+        num1, num2 = 1, -1
+        for i in range(2, n):
+            num1, num2 = num2, num1 - num2
+        return num2
 
 
-# number = int(input('Enter number: '))
-# list1 = [fibonacci(i) for i in range(1, number + 1)]
-# list2 = [negafibonacci(i) for i in range(number, 1, -1)]
-# print(list2+list1)
+number = int(input('Enter number: '))
+list1 = [fibonacci(i) for i in range(1, number + 1)]
+list2 = [negafibonacci(i) for i in range(number, 1, -1)]
+print(list2+list1)
