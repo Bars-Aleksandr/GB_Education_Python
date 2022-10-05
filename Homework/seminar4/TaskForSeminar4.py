@@ -29,20 +29,35 @@
 ################################################################################################
 
 # Задайте натуральное число N. Напишите программу, которая составит список простых множителей числа N.
-def multiplier(n):
-    mult = []
-    count = 2
-    while n != 1:
-        if n % count == 0:
-            mult.append(count)
-            n /= count
-        elif n / count != 0:
-            count += 1
-    return mult
+# def multiplier(n):
+#     mult = []
+#     count = 2
+#     while n != 1:
+#         if n % count == 0:
+#             mult.append(count)
+#             n /= count
+#         elif n / count != 0:
+#             count += 1
+#     return mult
 
 
-n = int(input('Enter a natural number N: '))
-if len(multiplier(n)) != 1:
-    print(multiplier(n))
-else:
-    print(n, '-prime number')
+# n = int(input('Enter a natural number N: '))
+# if len(multiplier(n)) != 1:
+#     print(multiplier(n))
+# else:
+#     print(n, '-prime number')
+#######################################################################################################
+
+# Задайте последовательность чисел.
+# Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
+
+def unique_list(entered_list):
+    list = []
+    for i in entered_list:
+        if i not in list:
+            list.append(i)
+    return list
+
+
+entered_list = list(map(int, input('Enter list: ').split()))
+print(unique_list(entered_list))
