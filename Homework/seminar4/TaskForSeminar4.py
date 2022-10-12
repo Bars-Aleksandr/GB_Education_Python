@@ -74,37 +74,38 @@
 # - k=2 => 2*x² + 4*x + 5 = 0 или x² + 5 = 0 или 10*x² = 0
 
 
-from random import randint
+# from random import randint
 
 
-def get_сoefficient(k):
-    сoefficient = [randint(0, 10) for i in range(k+1)]
-    return (сoefficient)
+# def get_сoefficient(k):
+#     сoefficient = [randint(0, 10) for i in range(k+1)]
+#     return (сoefficient)
 
 
-def get_polinom(k, elements):
-    var_x = []
-    for i in elements:
-        if k > 1:
-            var_x.append(f'{i}x^{k}')
-        elif k == 1:
-            var_x.append(f'{i}x')
-        elif k == 0:
-            var_x.append(f'{i}')
-        flag = randint(0, 1)
-        if flag == 1:
-            var_x.append('+')
-        elif flag == 0:
-            var_x.append('-')
-        k -= 1
-    var_x[-1] = '=0'
-    return var_x
+# def get_polinom(k, elements):
+#     var_x = []
+#     for i in elements:
+#         if k > 1:
+#             var_x.append(f'{i}x^{k}')
+#         elif k == 1:
+#             var_x.append(f'{i}x')
+#         elif k == 0:
+#             var_x.append(f'{i}')
+#         flag = randint(0, 1)
+#         if flag == 1:
+#             var_x.append('+')
+#         elif flag == 0:
+#             var_x.append('-')
+#         k -= 1
+#     var_x[-1] = '=0'
+#     return var_x
 
 
-degree = int(input('Enter natural number from 1 to 100: '))
-basic_elements = get_сoefficient(degree)
-polinom = get_polinom(degree, basic_elements)
-print(''.join(polinom))
-out_file = open('file.txt', 'w')
-out_file.write(''.join(polinom))
-out_file.close()
+# degree = int(input('Enter natural number from 1 to 100: '))
+# basic_elements = get_сoefficient(degree)
+# polinom = get_polinom(degree, basic_elements)
+# print(''.join(polinom))
+# out_file = open('file.txt', 'w')
+# out_file.write(''.join(polinom))
+# out_file.close()
+###################################################################################
