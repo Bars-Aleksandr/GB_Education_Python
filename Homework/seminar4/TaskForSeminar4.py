@@ -109,3 +109,76 @@
 # out_file.write(''.join(polinom))
 # out_file.close()
 ###################################################################################
+# Даны два файла, в каждом из которых находится запись многочлена.
+# Задача - сформировать файл, содержащий сумму многочленов.
+from random import randint
+
+
+def get_сoefficient(k):
+    сoefficient = [randint(1, 10) for i in range(k+1)]
+    return (сoefficient)
+
+
+def get_polinom(k, elements):
+    var_x = []
+    for i in elements:
+        if k > 1:
+            var_x.append(f'{i}x^{k}')
+        elif k == 1:
+            var_x.append(f'{i}x')
+        elif k == 0:
+            var_x.append(f'{i}')
+        flag = randint(0, 1)
+        if flag == 1:
+            var_x.append('+')
+        elif flag == 0:
+            var_x.append('-')
+        k -= 1
+    var_x[-1] = '=0'
+    return var_x
+
+
+def write_polinom_file(polinom, fl):
+    if fl == 1:
+        out_file = open('file_polimon1.txt', 'w')
+        out_file.write(''.join(polinom))
+        out_file.close()
+    elif fl == 2:
+        out_file = open('file_polimon2.txt', 'w')
+        out_file.write(''.join(polinom))
+        out_file.close()
+
+
+def create_files():
+    degree = int(input('Enter natural degree for polinom №1: '))
+    if degree != 0:
+        flag = 1
+        basic_elements = get_сoefficient(degree)
+        polinom = get_polinom(degree, basic_elements)
+        write_polinom_file(polinom, flag)
+    else:
+        print('try again')
+
+    degree = int(input('Enter natural degree for polinom №2: '))
+    if degree != 0:
+        flag = 2
+        basic_elements = get_сoefficient(degree)
+        polinom = get_polinom(degree, basic_elements)
+        write_polinom_file(polinom, flag)
+    else:
+        print('try again')
+
+
+create_files()
+in_file1 = open('file_polimon1.txt', 'r')
+pol1 = in_file1.read()
+pol1 = pol1[:-2].strip()
+print(pol1)
+in_file1.close()
+
+in_file2 = open('file_polimon2.txt', 'r')
+pol2 = in_file2.read()
+pol2 = pol2[:-2].strip()
+print(pol2)
+in_file2.close()
+print(pol1+'+'+pol2+'=0')
